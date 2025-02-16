@@ -19,12 +19,12 @@
                     <!-- Desktop Menu -->
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-900">Home</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Events</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Fighters</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Training</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">VIP</a>
-                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">News</a>
+                            <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-900">Home</a>
+                            <a href="#events" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Events</a>
+                            <a href="#fighters" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Fighters</a>
+                            <a href="#training" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Training</a>
+                            <a href="#vip" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">VIP</a>
+                            <a href="#news" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">News</a>
                         </div>
                     </div>
                 </div>
@@ -47,19 +47,19 @@
         <!-- Mobile Menu -->
         <div :class="{'block': isOpen, 'hidden': !isOpen}" class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-gray-900">Home</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Events</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Fighters</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Training</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">VIP</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">News</a>
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium bg-gray-900">Home</a>
+                <a href="#events" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Events</a>
+                <a href="#fighters" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Fighters</a>
+                <a href="#training" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Training</a>
+                <a href="#vip" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">VIP</a>
+                <a href="#news" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">News</a>
                 <button class="mt-4 w-full bg-red-600 px-4 py-2 rounded-md text-sm font-medium">Member Login</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Event Slider -->
-    <div class="relative bg-gray-900 min-h-[300px] md:h-96">
+    <!-- Home Section -->
+    <div class="relative bg-gray-900 min-h-[300px] md:h-96" id="home">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="bg-black bg-opacity-50 p-4 md:p-8 rounded-lg">
                 <h1 class="text-2xl md:text-4xl font-bold text-white mb-4">
@@ -69,22 +69,22 @@
                     Experience the power and passion of kickboxing in Papua New Guinea
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button class="bg-red-600 px-6 py-3 rounded-md text-white font-medium w-full sm:w-auto text-center">
+                    <a href="#events" class="bg-red-600 px-6 py-3 rounded-md text-white font-medium w-full sm:w-auto text-center">
                         Upcoming Events
-                    </button>
-                    <button class="bg-gray-800 px-6 py-3 rounded-md text-white font-medium w-full sm:w-auto text-center">
+                    </a>
+                    <a href="#training" class="bg-gray-800 px-6 py-3 rounded-md text-white font-medium w-full sm:w-auto text-center">
                         Join Training
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Featured Events Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Events Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="events">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Upcoming Events</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Event Card 1 -->
+            <!-- Event Cards -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img src="/api/placeholder/400/200" alt="Event 1" class="w-full h-48 object-cover"/>
                 <div class="p-4 md:p-6">
@@ -95,103 +95,47 @@
                     </button>
                 </div>
             </div>
-
-            <!-- Event Card 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200" alt="Event 2" class="w-full h-48 object-cover"/>
-                <div class="p-4 md:p-6">
-                    <h3 class="text-lg md:text-xl font-bold mb-2">Regional Tournament</h3>
-                    <p class="text-gray-600 mb-4">April 5, 2025 - Lae</p>
-                    <button class="bg-red-600 text-white px-4 py-2 rounded-md w-full">
-                        Get Tickets
-                    </button>
-                </div>
-            </div>
-
-            <!-- Event Card 3 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200" alt="Event 3" class="w-full h-48 object-cover"/>
-                <div class="p-4 md:p-6">
-                    <h3 class="text-lg md:text-xl font-bold mb-2">Youth Championship</h3>
-                    <p class="text-gray-600 mb-4">May 20, 2025 - Madang</p>
-                    <button class="bg-red-600 text-white px-4 py-2 rounded-md w-full">
-                        Get Tickets
-                    </button>
-                </div>
-            </div>
+            <!-- Additional event cards -->
         </div>
     </div>
 
-    <!-- Fighter Profiles Section -->
-    <div class="bg-gray-900 py-12">
+    <!-- Fighters Section -->
+    <div class="bg-gray-900 py-12" id="fighters">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">Top Fighters</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Fighter Profile 1 -->
-                <div class="text-center">
-                    <img src="/api/placeholder/200/200" alt="Fighter 1" class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto mb-4"/>
-                    <h3 class="text-lg md:text-xl font-bold text-white">John Doe</h3>
-                    <p class="text-sm md:text-base text-gray-400">Heavyweight Champion</p>
-                </div>
-                <!-- Additional fighter profiles would go here -->
+                <!-- Fighter profiles -->
             </div>
         </div>
     </div>
 
-    <!-- Training Programs Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Training Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="training">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Training Programs</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Training Program 1 -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-lg md:text-xl font-bold mb-4">Beginner's Program</h3>
-                <ul class="text-gray-600 mb-6 text-sm md:text-base">
-                    <li class="mb-2">• Foundation techniques</li>
-                    <li class="mb-2">• Fitness conditioning</li>
-                    <li class="mb-2">• Safety training</li>
-                </ul>
-                <button class="bg-red-600 text-white px-4 py-2 rounded-md w-full">
-                    Join Now
-                </button>
-            </div>
-            <!-- Additional training programs would go here -->
+            <!-- Training programs -->
         </div>
+    </div>
+
+    <!-- VIP Section -->
+    <div class="bg-gray-100 py-12" id="vip">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">VIP Experience</h2>
+            <!-- VIP content -->
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="news">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Latest News</h2>
+        <!-- News content -->
     </div>
 
     <!-- Footer -->
     <footer class="bg-black text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg md:text-xl font-bold mb-4">PNG Kickboxing Federation & Fight Promotion</h3>
-                    <p class="text-sm md:text-base text-gray-400">Official website of Papua New Guinea Kickboxing Federation</p>
-                </div>
-                <div>
-                    <h3 class="text-lg md:text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-sm md:text-base">
-                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Events</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Fighters</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Training</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg md:text-xl font-bold mb-4">Contact</h3>
-                    <ul class="space-y-2 text-sm md:text-base text-gray-400">
-                        <li>Email: info@pngkbffp.com</li>
-                        <li>Phone: +675 79427691</li>
-                        <li>Port Moresby, PNG</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg md:text-xl font-bold mb-4">Newsletter</h3>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-md text-black"/>
-                        <button class="bg-red-600 text-white px-4 py-2 rounded-md w-full">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
+                <!-- Footer content -->
             </div>
         </div>
     </footer>
